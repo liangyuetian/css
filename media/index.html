@@ -7,7 +7,72 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>media</title>
     <style>
+        @media (color-gamut: srgb) {
 
+            /* 色域查询 */
+            /* https://zhuanlan.zhihu.com/p/26032371 */
+            .hero {
+                background-image: url(http://example.com/foobar.png);
+            }
+        }
+
+        @media (color-gamut: p3) {
+            .hero {
+                background-image: url(http://example.com/foobar-p3.png);
+            }
+        }
+
+        @media screen and (max-width: 960px) {
+            body {
+                background-color: #FF6699
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            body {
+                background-color: #00FF66;
+            }
+        }
+
+        @media screen and (orientation: portrait) {
+            /* portrait：指定输出设备中的页面可见区域高度大于或等于宽度 */
+        }
+
+        @media screen and (orientation: landscape) {
+            /* landscape：除portrait值情况外，都是landscape */
+        }
+
+        @media screen and (device-width: 800px) {
+            /* 定义输出设备的屏幕可见宽度。本特性接受min和max前缀，因此可以派生出min-device-height和max-device-height两个媒体特性。 */
+        }
+
+        @media screen and (device-height: 800px) {
+            /* 定义输出设备的屏幕可见高度。本特性接受min和max前缀，因此可以派生出min-device-height和max-device-height两个媒体特性。 */
+        }
+
+        @media screen and (aspect-ratio: 1680/957) {
+            /* 定义输出设备中的页面可见区域宽度与高度的比率。本特性接受min和max前缀，因此可以派生出min-aspect-ratio和max-aspect-ratio两个媒体特性。 */
+        }
+
+        @media screen and (device-aspect-ratio: 4/3) {
+            /*  定义输出设备的屏幕可见宽度与高度的比率。
+                如常讲的显示器屏幕比率：4/3, 16/9, 16/10
+                本特性接受min和max前缀，因此可以派生出min-device-aspect-ratio和max-device-aspect-ratio两个媒体特性。 */
+        }
+
+        @media screen and (min-resolution: 96dpi) {
+            /* 定义设备的分辨率。如：96dpi, 300dpi, 118dpcm 本特性接受min和max前缀，因此可以派生出min-resolution和max-resolution两个媒体特性。 */
+        }
+
+        @media all and (grid: 1) {
+            /* 用来查询输出设备是否使用栅格或点阵。 */
+            /* 用整数值来定义是否使用栅格或点阵。只有1和0才是有效值，1代表是，0代表否 */
+            /* @import url(example.css) all and (grid:0); */
+        }
+
+        @media all and (monochrome) {
+            /* 指定了一个黑白（灰度）设备每个像素的比特数。如果不是黑白设备，值为0。 */
+        }
     </style>
 </head>
 
